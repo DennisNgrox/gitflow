@@ -1,0 +1,12 @@
+name: WorkFlow - Push
+run-name: Running - ${{ github.event_name }}
+on: [push]
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo "Workflow Push"
+        
