@@ -1,0 +1,25 @@
+# Executado manualmente via github interface, da para executar selecionando a branch
+
+name: WorkFlow - dispatch
+run-name: Running - ${{ github.event_name }}
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: selecione a tags
+        type: choice
+        options:
+          - tag_1
+          - tag_2
+          - tag_3
+        default: 'tag_1'
+        required: true
+
+jobs:
+  on-workflow_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo "${{ inputs.tags }}"
+        
