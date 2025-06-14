@@ -1,0 +1,16 @@
+# Push só aciona quando uma determinada branch bater a condição ignorando branches
+
+name: WorkFlow - Push branch ignore
+run-name: Running - ${{ github.event_name }}
+on:
+  push:
+    branches-ignore:
+      - development
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo "Workflow Push"
+        
