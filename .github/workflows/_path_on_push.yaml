@@ -1,0 +1,16 @@
+# Push só aciona quando algo referente ao arquivo seja alterado, exemplo (nome, extensão)
+
+name: WorkFlow - Push Path template
+run-name: Running - ${{ github.event_name }}
+on:
+  push:
+    paths:
+      - '**.txt' #Toda vez que um arquivo txt for alterado...
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo "Workflow Push"
+        
