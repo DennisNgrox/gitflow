@@ -1,0 +1,14 @@
+# Pull é uma solicitação de Merge, momento em que é realizado a validação das alterações e se aprovadas, ser aplicada a Master
+# Busca as alteraçoes e já faz o HEAD referenciar o ultimo commit e adicionar todas as alteraçoes
+
+name: WorkFlow - Pull request
+run-name: Running - ${{ github.event_name }}
+on: [pull_request]
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: |
+          echo "Workflow Push"
+        
