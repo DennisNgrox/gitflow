@@ -1,6 +1,6 @@
 # Push só aciona quando uma determinada branch for acionada, nesse caso, somente quando a branche development receber um push
 
-name: WorkFlow - Push
+name: WorkFlow - Push branch
 run-name: Running - ${{ github.event_name }}
 on:
   push:
